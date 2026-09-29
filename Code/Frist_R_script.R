@@ -20,3 +20,22 @@ elisa <- c(100, 80, 50, 20, 10) # an array of human deaths due to diseases
 usiamo la fuzione plot (matteo, elisa)
 ora usiamo il point character per mettere i simboli al plot
 plot(matteo, elisa, pch=8) il numero è relativo ai vari simboli, si può cambiare in base al simbolo che vuoi e si trovano su internet
+per cambiare la dimensione del simbolo usiamo character exaggeration
+plot(matteo, elisa, pch=8, cex=2)
+plot(matteo, elisa, pch=8, cex=0.5) - questo per dimezzare la dimensione.
+per copiare la funzione scritta al rigo di sopra, in r, si può usare la freccia verso l altro e te la copia direttamente
+per cambiare il colore in r ci sono i codici su internet
+plot(matteo, elisa, pch=8, cex=0.5, col="blue")
+
+per cambiare le labels degli assi, quindi il nome degli assi, si fa così
+plot(matteo, elisa, pch=8, cex=0.5, col="blue", xlab="number of mammals", ylab="number of human deaths")
+per incrementare la dimensione dei numeri degli assi, anare su chatgpt, ci mettiamo la funzione plot e chiediamo a lui il codice per cambiare la dimensione
+plot(matteo, elisa, pch=8, cex=0.5, col="blue", xlab="number of mammals", ylab="number of human deaths", cex.axis=2)
+si può fare la stessa cosa per la dimensione delle parole dei lables
+se la funzione diventa troppo lunga si può spezzettare andando a capo ad ogni argomento, tipo cosi
+plot(matteo, elisa, 
+     pch=8, cex=0.5, col="blue", 
+     xlab="number of mammals", ylab="number of human deaths", 
+     cex.axis=2, cex.lab=2)
+
+

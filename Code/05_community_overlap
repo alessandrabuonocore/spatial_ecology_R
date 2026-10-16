@@ -1,0 +1,10 @@
+vogliamo vedere l'overlap in time
+installare library(overlap)
+
+per usare il dataset 
+data(kerinci)
+per vedere poche righe head(kerinci) o anche per vedere la parte finale del dataset la funzione si chiama tail()
+tail(kerinci)
+per fare il summary -> summary(kerinci)
+calcoliamo per ogni specie quanto tempo ci mettono durante il giorno per muoversi in varie zone
+install.packages("igraph")

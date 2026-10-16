@@ -1,0 +1,35 @@
+the vegana package will be used for the multivariat part
+
+using the data inside vegan
+data(dune)
+poi scrivere dune per guardare dentro al dataaset
+
+oppure guardare solo le prime righe 
+la funzione si chiama ?head quindi scrivere head(dune) per guardare le prime righe
+
+quindi ora principal component analysis with vegan
+la funzione si chiama pca(dune)
+multipca <- pca(dune)
+noi siamo interessati agli eigenvalues che sono le lunghezze dei nuovi assi, basati sui plot originali
+per vedere la percentuale di variabilità espressa dai vari assi usiamo principal components analysis without vegan con la funzione 
+la chiamiamo multivar <- prcomp(dune)
+mettiamo multivar in erre
+per guardare sta percentuale ora dobbiamo fare il summary(multipca)
+lui mette le proporzioni non le percentuali, quindi per vederla basta multiplicare per 100
+
+quanta variabilità è spiegata dai primi due componenti?
+proporcion of PC1: 0.2947
+percentage of explained variablity of PC1: 29.47%
+
+esercizio: calculate the percentage of explained variability by PC2 -> 21.57%
+
+altro esercizio:  we are going to make a graph with just 2 dimensions over the 20 original dimensions
+what is the total variability explained by PC1 + PC2?
+total variability explained
+totvar= 29.47+21.57
+totvar = 51.04
+
+per fare il final plot
+plot(multipca)
+questo plot si basa solo sulle due prime dimesioni 
+

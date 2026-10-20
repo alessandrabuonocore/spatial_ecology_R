@@ -25,3 +25,34 @@ densityPlot(tiger$Timecirc)
 possiamo anche creare la time variable dal dataset della tigre al posto di usare questa funzione di sopra 
 tigertime <- tiger$Timecirc
 e poi facciamo densityPlot(tigertime) così facciamo lo stesso identico calcolo di prima e infatti esce fuori anche il grafico uguale a prima ma con un metodo più facile
+
+adesso facciamo la stessa cosa per un altra specie
+esercizio: select all the rows of the kerinci dataset with the species macaque
+macaque <- kerinci[kerinci$Sps=="macaque",]
+
+per essere sicuri che abbiamo preso solo macaque lo facciamo con summary(macaque)
+adesso facciamo il densityPlot del macaque
+densityPlot(macaque$Timecirc) oppure scriviamo macaquetime <- (macaque$Timecirc) e poi facciamo il densityPlot(macaquetime)
+
+adesso facciamo un overlap dei tempi di density plot della tigre e del macaco
+per trovare la funzione e capire come si fa, si può scrivere su r ?overlapPlot e ti apre in automatico una pagina dove spiega come fare
+la funzione è:
+overlapPlot(tigertime, macaquetime)
+
+per cambiare le impostzioni di default del grafico, tipo colori, tipo di linea ecc
+overlapPlot(tigertime, macaquetime, linetype=c(3,1))
+per cambiare il colore per esempio
+overlapPlot(tigertime, 
+macaquetime, linetype=c(3,1), linecol=c("coral", "cyan4"))
+
+per cambiare il colore della zona di overlap nel grafico 
+overlapPlot(tigertime, 
+macaquetime, linetype=c(3,1),
+linecol=c("coral", "cyan4"), olapcol="deeppink")
+
+- i colori e i tipi di linea si trovano su internet - 
+
+
+
+
+

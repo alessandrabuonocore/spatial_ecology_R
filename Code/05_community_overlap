@@ -8,3 +8,20 @@ tail(kerinci)
 per fare il summary -> summary(kerinci)
 calcoliamo per ogni specie quanto tempo ci mettono durante il giorno per muoversi in varie zone
 install.packages("igraph")
+
+circular time
+circulartime <- kerinci$Time * 2 * pi
+adesso se vogliamo aggiungere il circulartime dentro al dataset come nuova colonna dobbiamo
+kerinci$Timecirc <- kerinci$Time * 2 * pi
+poi per guardare la colonna fai head(kerinci)
+
+adesso facciamo il subsetting del dataset selezionando la specie tigre
+qual'è il dataset che vogliamo usare? kerinci, dentro kerinci dobbiamo fatto l'esatta quiry con le parentesi quadre
+tiger <- kerinci[kerinci$Sps=="tiger",]
+possiamo poi fare il summary(tiger)
+
+adesso guardiamo il density plot della tigre, cioè come usa lo spazio, nel senso quanto si sposta, la tigre durante il giorno?
+densityPlot(tiger$Timecirc)
+possiamo anche creare la time variable dal dataset della tigre al posto di usare questa funzione di sopra 
+tigertime <- tiger$Timecirc
+e poi facciamo densityPlot(tigertime) così facciamo lo stesso identico calcolo di prima e infatti esce fuori anche il grafico uguale a prima ma con un metodo più facile
